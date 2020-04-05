@@ -29,7 +29,10 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
   | Design/CSS | 12 hrs| ?|
   | Total | 48 hrs| ?|
 
-
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 
 
