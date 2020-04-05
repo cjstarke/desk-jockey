@@ -20,7 +20,7 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
 ## WireFrames
 
 #### Web Main Page
-![Webpage](https://i.imgur.com/2PIZ6o2.png | height="100") 
+![Webpage](https://i.imgur.com/2PIZ6o2.png) 
 #### Web Sign In/Up
 ![Websignin](https://i.imgur.com/T2K09JP.png)
 #### Mobile Main Page
@@ -29,6 +29,10 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
 ![TabletMain](https://i.imgur.com/7GEFOuQ.png)
 
 ## Component Tree
+![ComponentTree](https://i.imgur.com/WCeSDBL.png)
+
+## Database Structure
+![Database](https://i.imgur.com/hfcvlpD.png)
 
 ## Server Side Routes
 1. Create User  POST (`users`)
