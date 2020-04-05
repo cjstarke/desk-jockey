@@ -27,5 +27,7 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
   | User creae/update Sample | 4 hrs| |
   | Design/CSS | 12 hrs| |
   | Total | 48 hrs| |
+  
+  ---
 
 
