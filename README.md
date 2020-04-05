@@ -20,7 +20,7 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
 ## WireFrames
 
 #### Web Main Page
-![Webpage](https://imgur.com/2PIZ6o2) 
+![Webpage](https://i.imgur.com/2PIZ6o2.png) 
 
 #### Web Sign In/Up
 
