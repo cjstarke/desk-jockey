@@ -18,16 +18,18 @@ Desk Jockey is a full CRUD application with a React frontend and a Rails backend
 
 
 ## Timeline
+
 	| Component |  Estimated Time | Actual Time |
 	| --- | :---: | :---: | 
-	| Backend routes and seed data | 8 hrs| |
-	| frontend auth/sign in | 4 hrs| |
-	| Player that plays, loops, stops | 8hrs| | 
-  | Song nodes play at intervals | 8 hrs| |
-  | User creae/update Sample | 4 hrs| |
-  | Design/CSS | 12 hrs| |
-  | Total | 48 hrs| |
-  
-  ---
+	| Backend routes and seed data | 8 hrs| ?|
+	| frontend auth/sign in | 4 hrs| hrs|
+	| Player that plays, loops, stops | 8hrs| ?| 
+  | Song nodes play at intervals | 8 hrs| ?|
+  | User creae/update Sample | 4 hrs| ?|
+  | Design/CSS | 12 hrs| ?|
+  | Total | 48 hrs| ?|
+
+
+
 
 
