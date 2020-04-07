@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import BeatMaker from '../components/BeatMaker'
 
 class Home extends Component {
   constructor(props) {
@@ -8,7 +8,11 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>Home</div>
+      <>
+        <div>Home</div>
+        <BeatMaker />
+      </>
+      
     )
   }
 }
