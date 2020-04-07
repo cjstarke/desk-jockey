@@ -1,6 +1,6 @@
 import React from 'react'
 import { tracks } from '../services/constants'
-
+import TrackRow from './TrackRow'
 class BeatMaker extends React.Component {
   constructor(props) {
     super(props)
@@ -16,7 +16,9 @@ class BeatMaker extends React.Component {
   }
   onPlay = () => {
     this.setState({ player: "playing" })
-    this.player.play()
+    setTimeout(() => {
+      this.player.play()
+    }, 5000); 
     this.player2.play()
     this.player3.play()
   }
@@ -73,6 +75,8 @@ class BeatMaker extends React.Component {
         <audio ref={ref => this.player = ref} />
         <audio ref={ref => this.player2 = ref} />
         <audio ref={ref => this.player3 = ref} />
+        <TrackRow />
+        <TrackRow />
       </>
 
     )
