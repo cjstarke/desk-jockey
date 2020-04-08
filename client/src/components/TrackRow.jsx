@@ -15,6 +15,7 @@ class TrackRow extends React.Component {
           track={this.props.track}
           place={index + 1}
           player={this.props.player}
+          toggle={this.props.array[index]}
         />
     )
     })
