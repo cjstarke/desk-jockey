@@ -75,8 +75,10 @@ class BeatMaker extends React.Component {
         <audio ref={ref => this.player = ref} />
         <audio ref={ref => this.player2 = ref} />
         <audio ref={ref => this.player3 = ref} />
-        <TrackRow />
-        <TrackRow />
+        <TrackRow
+          track= "microwave"/>
+        <TrackRow
+          track = "stapler"/>
       </>
 
     )

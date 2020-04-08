@@ -1,5 +1,6 @@
 import React from 'react'
 import { tracks } from '../services/constants'
+import TrackNode from './TrackNode';
 
 class TrackRow extends React.Component {
   constructor(props) {
@@ -11,7 +12,10 @@ class TrackRow extends React.Component {
   render() {
     const row = Array.from(Array(16)).map((item, index) => {
       return (
-        <div>{index + 1}</div>
+        <TrackNode
+          track={this.props.track}
+          place={index+1}
+        />
     )
     })
     return (
