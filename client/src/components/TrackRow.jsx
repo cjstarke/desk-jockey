@@ -14,7 +14,8 @@ class TrackRow extends React.Component {
       return (
         <TrackNode
           track={this.props.track}
-          place={index+1}
+          place={index + 1}
+          player={this.props.player}
         />
     )
     })
