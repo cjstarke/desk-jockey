@@ -6,30 +6,30 @@ class BeatMaker extends React.Component {
     super(props)
     this.state = {
       selectedTrack: null,
-      player: "stopped"
+      player: "stopped",
+      looping: false
     }
+    this.interval = null
   }
-  componentDidMount() {
-    this.player.src = tracks.microwave
-    this.player2.src = tracks.stapler
-    this.player3.src = tracks.pentap
-  }
+  // componentDidMount() {
+  //   this.player.src = tracks.microwave
+  //   this.player2.src = tracks.stapler
+  //   this.player3.src = tracks.pentap
+  // }
   onPlay = () => {
-    this.setState({ player: "playing" })
-    setTimeout(() => {
-      this.player.play()
-    }, 5000); 
-    this.player2.play()
-    this.player3.play()
+    let counter = 0
+    this.setState({ player: "playing", looping: true })
+   this.interval = setInterval(() => {
+      
+      this.setState((prevState) => ({
+        player: `${prevState}${counter}`
+      }))
+      counter ++
+    }, 16*500);
   }
   onStop = () => {
-    this.setState({ player: "stopped" })
-    this.player.pause()
-    this.player.currentTime = 0
-    this.player2.pause()
-    this.player2.currentTime = 0
-    this.player3.pause()
-    this.player3.currentTime = 0
+    this.setState({ player: "stopped", looping: false })
+    clearInterval(this.interval)
   }
 
     // if (this.state.player !== prevState.player) {
@@ -51,30 +51,30 @@ class BeatMaker extends React.Component {
     return (
       <>
         <div>BeatMaker</div>
-        <ul>
+        {/* <ul>
           <li
             onClick={() => this.setState({selectedTrack: "microwave"})}
           >microwave</li>
            <li
             onClick={() => this.setState({selectedTrack: "stapler"})}
           >stapler</li>
-        </ul>
+        </ul> */}
         <div>
-          {this.state.player === "stopped" && (
+          {this.state.looping === false && (
             <button onClick={this.onPlay} >
               Play
             </button>
           )}
-          {this.state.player === "playing" && (
+          {this.state.looping === true && (
             <button onClick={this.onStop}>
               Stop
             </button>
           )}
 
         </div>
-        <audio ref={ref => this.player = ref} />
+        {/* <audio ref={ref => this.player = ref} />
         <audio ref={ref => this.player2 = ref} />
-        <audio ref={ref => this.player3 = ref} />
+        <audio ref={ref => this.player3 = ref} /> */}
         <TrackRow
           track="microwave"
           player={this.state.player}/>

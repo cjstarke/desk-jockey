@@ -5,8 +5,9 @@ class TrackNode extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      nodeOn: true
+      nodeOn: true,
     }
+    this.timer = null
   }
   toggleNode = () => {
     this.setState((prevState) => ({
@@ -18,7 +19,14 @@ class TrackNode extends React.Component {
   }
   componentDidUpdate = (prevProps) => {
     if (this.props.player !== prevProps.player) {
-      console.log('changed');
+      if (this.state.nodeOn) {
+        if (this.props.player === "stopped") {
+          this.onStop()
+        }
+        else {
+          this.onPlay()
+        }
+      }
     }
   }
   setSound = () => {
@@ -26,11 +34,16 @@ class TrackNode extends React.Component {
     this.sound.src = tracks[sample]
   }
   onPlay = () => {
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.sound.play()
     }, (this.props.place*500))
-
   }
+  onStop = () => {
+    clearTimeout(this.timer)
+    this.sound.pause()
+    this.sound.currentTime=0
+  }
+
     
 
 
