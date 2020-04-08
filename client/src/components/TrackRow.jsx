@@ -13,6 +13,7 @@ class TrackRow extends React.Component {
     const row = Array.from(Array(16)).map((item, index) => {
       return (
         <TrackNode
+          key={index}
           track={this.props.track}
           place={index + 1}
           player={this.props.player}

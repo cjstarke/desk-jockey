@@ -8,10 +8,40 @@ class TrackNode extends React.Component {
       nodeOn: true
     }
   }
+  toggleNode = () => {
+    this.setState((prevState) => ({
+        nodeOn: !prevState.nodeOn 
+    }))
+  }
+  componentDidMount = () => {
+    this.setSound()
+  }
+  componentDidUpdate = (prevProps) => {
+    if (this.props.player !== prevProps.player) {
+      console.log('changed');
+    }
+  }
+  setSound = () => {
+    let sample = this.props.track
+    this.sound.src = tracks[sample]
+  }
+  onPlay = () => {
+    setTimeout(() => {
+      this.sound.play()
+    }, (this.props.place*500))
+
+  }
+    
 
 
   render() {
-    return this.state.nodeOn ? <button>yes</button> : <button>no</button>
+
+    return (
+      <>
+        <button onClick={this.toggleNode}>{this.props.place}</button>
+        <audio ref={ref => this.sound = ref} />
+      </>
+    )
   }
 }  
 
