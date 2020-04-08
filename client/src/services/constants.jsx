@@ -3,6 +3,7 @@ import pentap from '../tracks/Pentap.mp3'
 import scissors from '../tracks/Scissors.mp3'
 import spacebar from '../tracks/SpaceBar.mp3'
 import stapler from '../tracks/Stapler.mp3'
+import mouseclick from '../tracks/Mouseclick.mp3'
 
 
 export const tracks = {
@@ -10,5 +11,6 @@ export const tracks = {
   pentap: pentap,
   scissors: scissors,
   spacebar: spacebar,
-  stapler: stapler
+  stapler: stapler,
+  mouseclick: mouseclick
 }

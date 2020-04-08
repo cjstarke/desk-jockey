@@ -32,20 +32,18 @@ class TrackNode extends React.Component {
   setSound = () => {
     let sample = this.props.track
     this.sound.src = tracks[sample]
+    this.sound.load()
   }
   onPlay = () => {
     this.timer = setTimeout(() => {
       this.sound.play()
-    }, (this.props.place*500))
+    }, (this.props.place*200))
   }
   onStop = () => {
     clearTimeout(this.timer)
     this.sound.pause()
     this.sound.currentTime=0
   }
-
-    
-
 
   render() {
 
