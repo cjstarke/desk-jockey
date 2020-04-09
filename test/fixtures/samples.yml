@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  microwave: MyString
+  stapler: MyString
+  pentap: MyString
+  scissors: MyString
+  spacebar: MyString
+  mouseclick: MyString
+  user: one
+
+two:
+  microwave: MyString
+  stapler: MyString
+  pentap: MyString
+  scissors: MyString
+  spacebar: MyString
+  mouseclick: MyString
+  user: two
