@@ -56,7 +56,14 @@ class TrackNode extends React.Component {
 
     return (
       <>
-        <button onClick={this.toggleNode}>{nodewords}</button>
+        <button
+          onClick={(e) => {
+            this.props.handleNodeChange(e)
+            this.toggleNode()
+          }}
+          value={this.props.place-1}
+          name= {this.props.track}
+        >{nodewords}</button>
         <audio ref={ref => this.sound = ref} />
       </>
     )

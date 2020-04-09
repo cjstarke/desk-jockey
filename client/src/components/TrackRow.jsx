@@ -12,6 +12,7 @@ class TrackRow extends React.Component {
       return (
         <TrackNode
           key={index}
+          handleNodeChange={this.props.handleNodeChange}
           track={this.props.track}
           place={index + 1}
           player={this.props.player}
