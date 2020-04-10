@@ -50,7 +50,7 @@ export const updateSample = async (id, user_id, item) => {
 }
 
 export const getUserSamples = async (user_id) => {
-  const resp = await api.get(`users/${user_id}/samples`)
+  const resp = await api.get(`users/${user}/samples`)
   return resp.data
 }
 
