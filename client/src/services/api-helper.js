@@ -44,3 +44,17 @@ export const createSample = async (item, user_id) => {
   const resp = await api.post(`/users/${user_id}/samples`, { sample: item })
   return resp.data
 }
+export const updateSample = async (id, user_id, item) => {
+  const resp = await api.put(`users/${user_id}/samples/${id}`, { sample: item })
+  return resp.data
+}
+
+export const getUserSamples = async (user_id) => {
+  const resp = await api.get(`users/${user_id}/samples`)
+  return resp.data
+}
+
+export const getSample = async (id, user_id) => {
+  const resp = await api.get(`users/${user_id}/samples/${id}`)
+  return resp.data
+}

@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 // This component handles our login form and has a link to the register form
@@ -12,7 +12,7 @@ const Login = (props) => {
       <form onSubmit={(e) => {
         e.preventDefault();
         props.handleLogin();}} >
-        <input name="email" type="text" value={props.formData.email} onChange={props.handleChange} />
+        <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
         <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
         <button>Login</button>
         <Link to="/register">Register</Link>
