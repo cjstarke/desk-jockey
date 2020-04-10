@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: process.env.NODE_ENV === 'production' ? 'https://desk-jockey-scoobylarson.herokuapp.com/' : 'http://localhost:3000'
 });
 
 // ====================================
@@ -50,7 +50,7 @@ export const updateSample = async (id, user_id, item) => {
 }
 
 export const getUserSamples = async (user_id) => {
-  const resp = await api.get(`users/${user}/samples`)
+  const resp = await api.get(`users/${user_id}/samples`)
   return resp.data
 }
 
