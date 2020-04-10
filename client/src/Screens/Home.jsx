@@ -10,7 +10,8 @@ class Home extends Component {
     return (
       <>
         <div>Home</div>
-        <BeatMaker />
+        <BeatMaker
+          currentUser={this.props.currentUser}/>
       </>
       
     )

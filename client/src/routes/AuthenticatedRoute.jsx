@@ -4,7 +4,7 @@ import { Route, Redirect } from 'react-router-dom'
 const AuthenticatedRoute = ({
   component: Component,
   children,
-  user,
+  currentUser,
   loaded,
   render,
   ...rest
@@ -18,7 +18,7 @@ const AuthenticatedRoute = ({
       <Route
         {...rest}
         render={(props) =>
-          localStorage.getItem("authToken") ? <Component {...props} /> : <Redirect to='/' />
+          localStorage.getItem("authToken") ? <Component {...props} /> : <Redirect to='/login' />
         }
       />
     )

@@ -47,6 +47,8 @@ class Container extends Component {
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser })
+    console.log(this.props.history)
+    
   }
 
   // Function to register a user
@@ -71,7 +73,7 @@ class Container extends Component {
   // and call our remove token function to remove
   // the auth headers from our api call
   handleLogout = () => {
-    localStorage.removeItem("jwt");
+    localStorage.removeItem("authToken");
     this.setState({
       currentUser: null
     })
@@ -91,7 +93,10 @@ class Container extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header
+          handleLogout={this.handleLogout}
+          handleLogin={this.handleLoginButton}
+          currentUser={this.state.currentUser} />
         <Routes
           handleLogin={this.handleLogin}
           handleChange={this.authHandleChange}

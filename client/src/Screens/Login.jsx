@@ -5,13 +5,21 @@ import { Link } from 'react-router-dom';
 // This component handles our login form and has a link to the register form
 const Login = (props) => {
 
+  const Submit = async (e) => {
+    e.preventDefault();
+    await props.handleLogin().then(()=> props.history.push(`/home`))
+
+  }
+  const Change = async e => {
+    Submit(e)
+    
+  }
+
   return (
     <div>
       <h2>login</h2>
       <hr />
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        props.handleLogin();}} >
+      <form onSubmit={Change} >
         <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
         <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
         <button>Login</button>

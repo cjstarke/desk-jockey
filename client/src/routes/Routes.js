@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, Router } from 'react-router-dom'
+import { Route, Switch, Router, Redirect } from 'react-router-dom'
 import Home from '../screens/Home'
 import Login from '../screens/Login'
 import Register from '../screens/Register'
@@ -8,6 +8,7 @@ import AuthenticatedRoute from './AuthenticatedRoute'
 
 const Routes = ({handleLogin, handleChange, handleRegister, formData, currentUser, loaded}) => (
   <Switch>
+    
      <Route
       exact
       path="/login"
@@ -22,8 +23,9 @@ const Routes = ({handleLogin, handleChange, handleRegister, formData, currentUse
       exact
       path="/home"
       user = {currentUser}
-      render={props => <Home {...props} user={currentUser} loaded={loaded}/>}
+      render={props => <Home {...props} currentUser={currentUser} loaded={loaded}/>}
     />
+    <Redirect from='/' to='/home'/>
   </Switch>
 )
 
