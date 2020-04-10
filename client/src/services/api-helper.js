@@ -35,3 +35,12 @@ export const verifyUser = async () => {
 export const removeToken = () => {
   api.defaults.headers.common.authorization = null;
 }
+
+// ====================================
+// ============= Samples =================
+// ====================================
+
+export const createSample = async (item, user_id) => {
+  const resp = await api.post(`/users/${user_id}/samples`, { sample: item })
+  return resp.data
+}

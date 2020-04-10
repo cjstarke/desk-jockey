@@ -1,9 +1,10 @@
 class SamplesController < ApplicationController
   before_action :set_sample, only: [:show, :update, :destroy]
-
+  before_action :set_user
   # GET /samples
   def index
-    @samples = Sample.all
+    
+    @samples = Sample.where(:user => @user)
 
     render json: @samples
   end
@@ -44,8 +45,12 @@ class SamplesController < ApplicationController
       @sample = Sample.find(params[:id])
     end
 
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+
     # Only allow a trusted parameter "white list" through.
     def sample_params
-      params.require(:sample).permit(:microwave, :stapler, :pentap, :scissors, :spacebar, :mouseclick, :user_id)
+      params.require(:sample).permit(:microwave, :stapler, :pentap, :scissors, :spacebar, :mouseclick, :name, :user_id)
     end
 end
