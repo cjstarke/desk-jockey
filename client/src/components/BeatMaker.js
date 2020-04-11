@@ -1,12 +1,13 @@
 import React from 'react'
 import TrackRow from './TrackRow'
 import SaveSample from './SaveSample'
-import {createSample, updateSample} from '../services/api-helper'
+import {createSample, updateSample, getUserSamples} from '../services/api-helper'
 
 class BeatMaker extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      userSamples: [],
       selectedTrack: null,
       player: "stopped",
       looping: false,
@@ -20,9 +21,23 @@ class BeatMaker extends React.Component {
     }
     this.interval = null
   }
-  componentDidMount = () => {
+  componentDidMount = async () => {
+    if (this.props.currentUser) {
+      let res = await getUserSamples(this.props.currentUser.id)
+      this.setState({ userSamples: res })
+      console.log(res)
+      }
     this.setRows()
   }
+  componentDidUpdate = async (prevProps) => {
+    if (this.props.currentUser !== prevProps.currentUser) {
+      if (this.props.currentUser) {
+        let res = await getUserSamples(this.props.currentUser.id)
+        this.setState({ userSamples: res })
+        console.log(res)
+        }
+    }
+    }
   submitSample = async (e) => {
     e.preventDefault()
     let sampleData = {}
@@ -47,6 +62,17 @@ class BeatMaker extends React.Component {
       spacebar: Array(16).fill(false),
       mouseclick: Array(16).fill(false),
     })    
+  }
+  showUserSamples = () => {
+    let samples = this.state.userSamples
+    let map = samples.map((sample) => {
+      return (
+        <div>
+          <button>{sample.name}</button>
+        </div>  
+      )
+    })
+    return map
   }
 
   onPlay = () => {
@@ -81,6 +107,8 @@ class BeatMaker extends React.Component {
     this.setState({ [name]: value })
   }
   render() {
+    let map = null
+    this.state.userSamples? map = this.showUserSamples : map = (<></>)
     return (
       <>
         <div>BeatMaker</div>
@@ -131,7 +159,11 @@ class BeatMaker extends React.Component {
           array={this.state.mouseclick}
           handleNodeChange={this.OnNodeChange}
           player={this.state.player} />
-        
+        <div>
+          {this.state.userSamples.map((sample) => {
+            return (<button>{sample.name}</button>)
+            })}
+        </div>
         
       </>
 
