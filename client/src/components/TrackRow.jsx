@@ -11,6 +11,7 @@ class TrackRow extends React.Component {
     const row = Array.from(Array(16)).map((item, index) => {
       return (
         <TrackNode
+          currentSample = {this.props.currentSample}
           key={index}
           handleNodeChange={this.props.handleNodeChange}
           track={this.props.track}
