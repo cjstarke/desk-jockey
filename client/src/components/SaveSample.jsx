@@ -9,7 +9,7 @@ class SaveSample extends React.Component {
   render() {
     return (
       <>
-        <form >
+        <form onSubmit = {this.props.submitSample}>
         <input name="sample" type="text" value={this.props.sample} onChange={this.props.handleSampleName} />
           <button disabled={!this.props.sample}>Save</button>
       </form>

@@ -1,6 +1,7 @@
 import React from 'react'
 import TrackRow from './TrackRow'
 import SaveSample from './SaveSample'
+import {createSample, updateSample} from '../services/api-helper'
 
 class BeatMaker extends React.Component {
   constructor(props) {
@@ -21,6 +22,19 @@ class BeatMaker extends React.Component {
   }
   componentDidMount = () => {
     this.setRows()
+  }
+  submitSample = async (e) => {
+    e.preventDefault()
+    let sampleData = {}
+    sampleData.name = this.state.sample
+    sampleData.microwave = this.state.microwave.join(" ")
+    sampleData.stapler = this.state.stapler.join(" ")
+    sampleData.pentap = this.state.pentap.join(" ")
+    sampleData.scissors = this.state.scissors.join(" ")
+    sampleData.spacebar = this.state.spacebar.join(" ")
+    sampleData.mouseclick = this.state.mouseclick.join(" ")
+    sampleData.user_id=this.props.currentUser.id
+    await createSample(sampleData, this.props.currentUser.id)
   }
   setRows = () => {
     let falseArray = Array(16)
@@ -72,7 +86,8 @@ class BeatMaker extends React.Component {
         <div>BeatMaker</div>
         <SaveSample
           sample={this.state.sample}
-          handleSampleName={this.handleSampleName}/>
+          handleSampleName={this.handleSampleName}
+          submitSample={this.submitSample}/>
         <div>
           {this.state.looping === false && (
             <button onClick={this.onPlay} >

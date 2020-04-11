@@ -19,7 +19,7 @@ class SamplesController < ApplicationController
     @sample = Sample.new(sample_params)
 
     if @sample.save
-      render json: @sample, status: :created, location: @sample
+      render json: @sample, status: :created
     else
       render json: @sample.errors, status: :unprocessable_entity
     end
