@@ -47,14 +47,12 @@ class Container extends Component {
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.authFormData);
     this.setState({ currentUser })
-    console.log(this.props.history)
     
   }
 
   // Function to register a user
   // we set the user data in state.
-  handleRegister = async (e) => {
-    e.preventDefault();
+  handleRegister = async () => {
     const currentUser = await registerUser(this.state.authFormData);
     this.setState({ currentUser })
     this.setState({loaded: true})

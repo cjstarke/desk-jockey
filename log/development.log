@@ -2222,3 +2222,248 @@ Processing by AuthenticationController#login as HTML
 Completed 200 OK in 325ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 979)
 
 
+Started POST "/users/" for ::1 at 2020-04-11 09:35:06 -0400
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"nola", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (12.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nola"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (36.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "nola"], ["password_digest", "$2a$12$xxjBq8jDVmYthYyihlOs8uXaLF.VO1RjbZFPCtzTJTkG7eRJ.bJTO"], ["created_at", "2020-04-11 13:35:07.605945"], ["updated_at", "2020-04-11 13:35:07.605945"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 485ms (Views: 1.0ms | ActiveRecord: 103.8ms | Allocations: 7992)
+
+
+Started POST "/users/" for ::1 at 2020-04-11 09:35:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"nola", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nola"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 334ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 4046)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:35:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 54ms (Views: 0.7ms | ActiveRecord: 45.1ms | Allocations: 1075)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:35:38 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"nola", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"nola", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nola"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 319ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1165)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:35:41 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"nola", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"nola", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nola"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 311ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 996)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:35:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scobby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scobby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scobby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 1111)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:38:57 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 59ms (Views: 1.0ms | ActiveRecord: 8.4ms | Allocations: 6275)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:39:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 349ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1172)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:39:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 311ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 999)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:39:17 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 309ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 996)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:39:36 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 850)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:50:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 64ms (Views: 10.0ms | ActiveRecord: 24.6ms | Allocations: 920)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:50:25 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 327ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 985)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:51:40 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 315ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 979)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:53:40 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 335ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 979)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:54:00 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:54:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:54:09 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:54:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 09:58:06 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 40ms (Views: 3.4ms | ActiveRecord: 12.3ms | Allocations: 832)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-11 09:58:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scooby", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scooby"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 329ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 982)
+
+
+Started POST "/users/" for ::1 at 2020-04-11 10:01:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (8.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "scoobis"], ["password_digest", "$2a$12$APaRGLULUSj41QvRg69JHOY822LBn9IxTe17KBq3pVeQZ2mqWodky"], ["created_at", "2020-04-11 14:01:08.558527"], ["updated_at", "2020-04-11 14:01:08.558527"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 364ms (Views: 1.7ms | ActiveRecord: 12.1ms | Allocations: 4170)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:50:50 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 2.3ms | Allocations: 919)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:51:37 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 1.7ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:30 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:32 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 1.9ms | ActiveRecord: 3.8ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (151.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 169ms (Views: 2.0ms | ActiveRecord: 151.4ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:51 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 829)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-11 10:52:53 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.0ms | Allocations: 829)
+
+

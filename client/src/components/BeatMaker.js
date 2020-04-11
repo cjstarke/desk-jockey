@@ -1,5 +1,6 @@
 import React from 'react'
 import TrackRow from './TrackRow'
+import SaveSample from './SaveSample'
 
 class BeatMaker extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class BeatMaker extends React.Component {
       pentap: [],
       scissors: [],
       spacebar: [],
-      mouseclick: [] 
+      mouseclick: [],
+      sample: ""
     }
     this.interval = null
   }
@@ -60,11 +62,17 @@ class BeatMaker extends React.Component {
     
 
   }
-
+  handleSampleName = (e) => {
+    const { name, value } = e.target
+    this.setState({ [name]: value })
+  }
   render() {
     return (
       <>
         <div>BeatMaker</div>
+        <SaveSample
+          sample={this.state.sample}
+          handleSampleName={this.handleSampleName}/>
         <div>
           {this.state.looping === false && (
             <button onClick={this.onPlay} >
