@@ -7683,3 +7683,25 @@ Processing by SamplesController#index as HTML
 Completed 200 OK in 55ms (Views: 4.5ms | ActiveRecord: 46.5ms | Allocations: 1644)
 
 
+Started POST "/users/" for ::1 at 2020-04-12 14:02:19 -0400
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"CJs", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "CJs"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (13.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "CJs"], ["password_digest", "$2a$12$umm1VoJAURc0V9M2a7hn4uT9VpOMcv4HI/SUVeQeT8Ig3nQmPVrTa"], ["created_at", "2020-04-12 18:02:20.261699"], ["updated_at", "2020-04-12 18:02:20.261699"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 451ms (Views: 1.3ms | ActiveRecord: 70.0ms | Allocations: 7994)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 14:02:36 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 37ms (Views: 0.7ms | ActiveRecord: 21.7ms | Allocations: 1077)
+
+

@@ -1,9 +1,9 @@
 const axios = require('axios');
 
-// const baseUrl = process.env.NODE_ENV === 'production' ? 'https://desk-jockey-scoobylarson.herokuapp.com/' : 'http://localhost:3000'
+ const baseUrl = process.env.NODE_ENV === 'production' ? 'https://desk-jockey-scoobylarson.herokuapp.com/' : 'http://localhost:3000'
 
 const api = axios.create({
-  baseURL : 'https://desk-jockey-scoobylarson.herokuapp.com/'
+  baseURL : baseUrl
 });
 
 // ====================================
