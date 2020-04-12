@@ -18,7 +18,8 @@ class BeatMaker extends React.Component {
       spacebar: [],
       mouseclick: [],
       sample: "",
-      currentSample: null
+      currentSample: null,
+      currentId: null
     }
     this.interval = null
   }
@@ -108,6 +109,7 @@ class BeatMaker extends React.Component {
         scissors: scissors,
         spacebar: spacebar,
         mouseclick: mouseclick,
+        currentId: currentSample.id
       })
     }
     else {
@@ -178,6 +180,7 @@ class BeatMaker extends React.Component {
         <div>BeatMaker</div>
         <SaveSample
           sample={this.state.sample}
+          currentId ={this.state.currentId}
           handleSampleName={this.handleSampleName}
           submitSample={this.submitSample}/>
         <div>
