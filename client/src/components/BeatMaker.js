@@ -1,13 +1,14 @@
 import React from 'react'
 import TrackRow from './TrackRow'
 import SaveSample from './SaveSample'
-import {createSample, updateSample, getUserSamples} from '../services/api-helper'
+import {createSample, updateSample, getUserSamples, getFreeSamples} from '../services/api-helper'
 
 class BeatMaker extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       userSamples: [],
+      freeSamples: [],
       selectedTrack: null,
       player: "stopped",
       looping: false,
@@ -19,11 +20,15 @@ class BeatMaker extends React.Component {
       mouseclick: [],
       sample: "",
       currentSample: null,
-      currentId: null
+      currentId: null,
+      currentName: null,
+      sampleUser: null
     }
     this.interval = null
   }
   componentDidMount = async () => {
+    let response = await getFreeSamples()
+    this.setState({freeSamples: response})
     if (this.props.currentUser) {
       let res = await getUserSamples(this.props.currentUser.id)
       this.setState({ userSamples: res })
@@ -109,7 +114,9 @@ class BeatMaker extends React.Component {
         scissors: scissors,
         spacebar: spacebar,
         mouseclick: mouseclick,
-        currentId: currentSample.id
+        currentId: currentSample.id,
+        currentName: currentSample.name,
+        sampleUser: currentSample.user_id
       })
     }
     else {
@@ -161,7 +168,6 @@ class BeatMaker extends React.Component {
     console.log(stateObj)
     this.setState({stateObj })
     
-
   }
   handleSampleName = (e) => {
     const { name, value } = e.target
@@ -169,20 +175,42 @@ class BeatMaker extends React.Component {
   }
   handleSampleButton = (e) => {
     let sampleIndex = e.target.value
-    let sample = this.state.userSamples[sampleIndex]
-    this.setState({currentSample: sample})
+    let sampleName = e.target.name
+    if (sampleName === "user") {
+      let sample = this.state.userSamples[sampleIndex]
+      this.setState({currentSample: sample})
+    } else if (sampleName === "free") {
+      let sample = this.state.freeSamples[sampleIndex]
+      this.setState({currentSample: sample})
+    }
+
   }
+
+  hanldeUpdateSample = async (e) => {
+    let sampleId = e.target.value
+    let sampleData = {}
+
+    sampleData.microwave = this.state.microwave.join(" ")
+    sampleData.stapler = this.state.stapler.join(" ")
+    sampleData.pentap = this.state.pentap.join(" ")
+    sampleData.scissors = this.state.scissors.join(" ")
+    sampleData.spacebar = this.state.spacebar.join(" ")
+    sampleData.mouseclick = this.state.mouseclick.join(" ")
+    await updateSample(sampleId, this.props.currentUser.id, sampleData)
+  }
+
   render() {
-    let map = null
-    this.state.userSamples? map = this.showUserSamples : map = (<></>)
     return (
       <>
         <div>BeatMaker</div>
         <SaveSample
           sample={this.state.sample}
-          currentId ={this.state.currentId}
+          currentId={this.state.currentId}
+          sampleName={this.state.currentName}
           handleSampleName={this.handleSampleName}
-          submitSample={this.submitSample}/>
+          submitSample={this.submitSample}
+          sampleUser = {this.state.sampleUser}
+          updateSample={this.hanldeUpdateSample}/>
         <div>
           {this.state.looping === false && (
             <button onClick={this.onPlay} >
@@ -234,8 +262,13 @@ class BeatMaker extends React.Component {
           player={this.state.player} />
         <div>
           {this.state.userSamples.map((sample, index) => {
-            return (<button value={index} onClick={this.handleSampleButton}>{sample.name}</button>)
-            })}
+            return (<button name="user" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
+          })}
+        </div>
+        <div>
+          {this.state.freeSamples.map((sample, index) => {
+            return (<button name="free" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
+          })}
         </div>
         
       </>

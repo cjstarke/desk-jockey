@@ -1,0 +1,2 @@
+class FreeSample < ApplicationRecord
+end

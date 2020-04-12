@@ -58,3 +58,17 @@ export const getSample = async (id, user_id) => {
   const resp = await api.get(`users/${user_id}/samples/${id}`)
   return resp.data
 }
+
+// ====================================
+// ============= Samples =================
+// ====================================
+export const getFreeSample = async (id) => {
+  const resp = await api.get(`free_samples/${id}`)
+  return resp.data
+}
+export const getFreeSamples = async () => {
+  const resp = await api.get(`free_samples`)
+  return resp.data
+}
+
+

@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
 
 class Header extends React.Component {
   constructor(props) {

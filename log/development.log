@@ -5978,3 +5978,1708 @@ Processing by SamplesController#index as HTML
 Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.7ms | Allocations: 1848)
 
 
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:50:59 -0400
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 317ms (Views: 6.7ms | ActiveRecord: 141.4ms | Allocations: 6281)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:51:03 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 82ms (Views: 38.0ms | ActiveRecord: 25.8ms | Allocations: 9658)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:51:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (739.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 766ms (Views: 5.3ms | ActiveRecord: 739.9ms | Allocations: 854)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:51:49 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (22.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 60ms (Views: 27.0ms | ActiveRecord: 26.9ms | Allocations: 1867)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:51:55 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 56ms (Views: 14.7ms | ActiveRecord: 1.9ms | Allocations: 850)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:51:56 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (9.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 51ms (Views: 17.0ms | ActiveRecord: 22.5ms | Allocations: 1867)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:52:25 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 86ms (Views: 55.7ms | ActiveRecord: 2.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:52:26 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (4.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 18.3ms | ActiveRecord: 5.3ms | Allocations: 1850)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:52:46 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 33ms (Views: 2.4ms | ActiveRecord: 2.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:52:46 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (28.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 68ms (Views: 24.2ms | ActiveRecord: 30.0ms | Allocations: 1850)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:53:36 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 65ms (Views: 10.2ms | ActiveRecord: 9.0ms | Allocations: 833)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:53:37 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 8.8ms | ActiveRecord: 13.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:53:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:53:40 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 1.0ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:58:23 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 38ms (Views: 6.1ms | ActiveRecord: 15.5ms | Allocations: 835)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:58:24 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (53.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 73ms (Views: 9.6ms | ActiveRecord: 56.9ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:58:28 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:58:29 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:58:42 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:58:43 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.2ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 2.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:58:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:58:46 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:59:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:59:04 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (3.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 3.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:59:06 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:59:07 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 09:59:58 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 09:59:59 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (16.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 34ms (Views: 8.5ms | ActiveRecord: 20.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:20 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 47ms (Views: 16.4ms | ActiveRecord: 1.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:21 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 9.1ms | ActiveRecord: 4.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:28 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:28 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 1.1ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 6.0ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:33 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (117.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (5.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 129ms (Views: 3.9ms | ActiveRecord: 122.7ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:37 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:37 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.1ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 5.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:57 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:57 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.4ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:01:59 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:01:59 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 3.2ms | Allocations: 1849)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:02:53 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 32ms (Views: 7.1ms | ActiveRecord: 2.9ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:02:54 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (31.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (12.2ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 55ms (Views: 6.9ms | ActiveRecord: 43.7ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:03 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:04 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 2.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:07 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 7.2ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:07 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 3.7ms | ActiveRecord: 10.1ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:16 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:16 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:22 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 4.0ms | ActiveRecord: 24.7ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:29 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:30 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (38.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (85.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 131ms (Views: 4.6ms | ActiveRecord: 123.8ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:03:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:03:34 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (13.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 4.9ms | ActiveRecord: 18.4ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:11 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.0ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:15 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 3.4ms | ActiveRecord: 18.2ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:19 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 836)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:19 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (11.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 3.4ms | ActiveRecord: 12.4ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:26 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:26 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:35 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (9.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 2.8ms | ActiveRecord: 10.3ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:04:37 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:04:37 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:20:55 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 101ms (Views: 4.4ms | ActiveRecord: 2.9ms | Allocations: 920)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:21:01 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.1ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 2.7ms | Allocations: 1853)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:23:28 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (30.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 88ms (Views: 22.9ms | ActiveRecord: 30.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:23:30 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (524.2ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 575ms (Views: 23.4ms | ActiveRecord: 539.1ms | Allocations: 1851)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:23:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:23:33 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (5.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 18.8ms | ActiveRecord: 5.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:24:23 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (165.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 192ms (Views: 9.3ms | ActiveRecord: 165.3ms | Allocations: 833)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:24:24 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 12.3ms | ActiveRecord: 2.0ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:49:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 67ms (Views: 3.4ms | ActiveRecord: 44.8ms | Allocations: 921)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:49:03 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 3.5ms | Allocations: 1853)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:49:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 4.8ms | ActiveRecord: 2.1ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:49:19 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:49:50 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 9.2ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:49:52 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.2ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:49:54 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:49:55 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.9ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:50:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:50:10 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (110.1ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 117ms (Views: 4.8ms | ActiveRecord: 110.4ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:50:17 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:50:18 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 12.2ms | ActiveRecord: 3.7ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:50:25 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 3.8ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:50:26 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 3.0ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:50:29 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 3.1ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:50:30 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (25.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 51ms (Views: 13.3ms | ActiveRecord: 32.0ms | Allocations: 1849)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:07 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:08 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 1.6ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:11 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 2.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:15 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:16 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 1.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:23 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (25.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 10.8ms | ActiveRecord: 26.5ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:44 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (77.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 461ms (Views: 0.7ms | ActiveRecord: 77.3ms | Allocations: 836)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:45 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (62.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (46.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 120ms (Views: 5.9ms | ActiveRecord: 109.1ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:51:49 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 12.6ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:51:49 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (15.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 5.9ms | ActiveRecord: 16.2ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:52:06 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:52:06 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:52:19 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 18.5ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:52:20 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 10:52:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 10:52:24 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.9ms | Allocations: 1848)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 11:03:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (67.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 98ms (Views: 6.1ms | ActiveRecord: 69.9ms | Allocations: 920)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 11:03:11 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (3.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 7.0ms | ActiveRecord: 4.1ms | Allocations: 1853)
+
+
+Started PUT "/users/3/samples/5" for ::1 at 2020-04-12 11:03:25 -0400
+Processing by SamplesController#update as HTML
+  Parameters: {"sample"=>{"microwave"=>"true true false false false false false false false false false false false false false false", "stapler"=>"true true false false false false false false false false false false false false false false", "pentap"=>"true true false false false false false false false false false false false false false false", "scissors"=>"true true false false false false false false false false false false false false false false", "spacebar"=>"true true false false false false false false false false false false false false false false", "mouseclick"=>"true true false false false false false false false false false false false false false false"}, "user_id"=>"3", "id"=>"5"}
+  [1m[36mSample Load (6.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:45:in `set_sample'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[35m (14.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[36mSample Update (71.9ms)[0m  [1m[33mUPDATE "samples" SET "microwave" = $1, "stapler" = $2, "pentap" = $3, "scissors" = $4, "spacebar" = $5, "mouseclick" = $6, "updated_at" = $7 WHERE "samples"."id" = $8[0m  [["microwave", "true true false false false false false false false false false false false false false false"], ["stapler", "true true false false false false false false false false false false false false false false"], ["pentap", "true true false false false false false false false false false false false false false false"], ["scissors", "true true false false false false false false false false false false false false false false"], ["spacebar", "true true false false false false false false false false false false false false false false"], ["mouseclick", "true true false false false false false false false false false false false false false false"], ["updated_at", "2020-04-12 15:03:25.751489"], ["id", 5]]
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+Completed 200 OK in 368ms (Views: 1.0ms | ActiveRecord: 119.3ms | Allocations: 7615)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 11:03:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.7ms | ActiveRecord: 13.0ms | Allocations: 832)
+
+
+Started GET "/users/3/samples" for ::1 at 2020-04-12 11:03:46 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 3.3ms | Allocations: 1848)
+
+
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1763542498076893695)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFreeSamples (20200412155555)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (84.0ms)[0m  [1m[35mCREATE TABLE "free_samples" ("id" bigserial primary key, "name" character varying, "microwave" character varying, "stapler" character varying, "pentap" character varying, "scissors" character varying, "spacebar" character varying, "mouseclick" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200412155555"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1763542498076893695)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (33.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (40.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mSample Load (0.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (0.6ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 1]]
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (0.4ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (0.4ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (0.4ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 4]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (1.3ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 6]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Destroy (1.7ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (7.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFreeSample Load (2.6ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobylarson"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "scoobylarson"], ["password_digest", "$2a$12$etVBPpC48486ckPqj7naU.3zyOjcWtC.x0EVwLGEKU0qydzcFfkEe"], ["created_at", "2020-04-12 16:07:51.166509"], ["updated_at", "2020-04-12 16:07:51.166509"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "common"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "common"], ["password_digest", "$2a$12$ffv/aBpm30L/mJ1FB.xaVeF/BFd1uV11202H6m0RxQumpw6QazP7i"], ["created_at", "2020-04-12 16:07:51.489045"], ["updated_at", "2020-04-12 16:07:51.489045"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSample Create (7.8ms)[0m  [1m[32mINSERT INTO "samples" ("microwave", "stapler", "pentap", "scissors", "spacebar", "mouseclick", "user_id", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["microwave", "false false false false false false false false false false false false false false false false "], ["stapler", "false true false true false true false true false true false true false true false true "], ["pentap", "false true false true false true false true false true false true false true false true "], ["scissors", "false false false false false false false false false false false false false false false false "], ["spacebar", "false true false true false true false true false true false true false true false true "], ["mouseclick", "false false false false false false false false false false false false false false false false "], ["user_id", 5], ["created_at", "2020-04-12 16:07:51.507937"], ["updated_at", "2020-04-12 16:07:51.507937"], ["name", "default 1"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFreeSample Create (2.4ms)[0m  [1m[32mINSERT INTO "free_samples" ("name", "microwave", "stapler", "pentap", "scissors", "spacebar", "mouseclick", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sample1"], ["microwave", "false true false true false true false true false true false true false true false true "], ["stapler", "false true false true false true false true false true false true false true false true "], ["pentap", "false true false true false true false true false true false true false true false true "], ["scissors", "false false false false false false false false false false false false false false false false "], ["spacebar", "false false false false false false false false false false false false false false false false "], ["mouseclick", "false false false false false false false false false false false false false false false false "], ["created_at", "2020-04-12 16:07:51.543006"], ["updated_at", "2020-04-12 16:07:51.543006"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "samples"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "free_samples"[0m
+Started GET "/auth/verify" for ::1 at 2020-04-12 12:48:57 -0400
+Started GET "/free_samples" for ::1 at 2020-04-12 12:48:57 -0400
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (34.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (23.8ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 33.6ms | ActiveRecord: 30.7ms | Allocations: 8844)
+
+
+  [1m[36mUser Load (24.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 138ms (Views: 1.4ms | ActiveRecord: 90.9ms | Allocations: 12976)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 12:49:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 770)
+
+
+Started POST "/users/" for ::1 at 2020-04-12 12:49:25 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (11.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "scoobis"], ["password_digest", "$2a$12$QwfNiw1FBIb3IX4E8mprz.7UlBQoMER.napGkZFKh0I0aAuDpwBBa"], ["created_at", "2020-04-12 16:49:26.206396"], ["updated_at", "2020-04-12 16:49:26.206396"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 406ms (Views: 1.8ms | ActiveRecord: 16.4ms | Allocations: 6901)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 12:49:26 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (3.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 3.1ms | Allocations: 1032)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 12:49:26 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (27.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 70ms (Views: 9.0ms | ActiveRecord: 33.2ms | Allocations: 2913)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 12:49:32 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 324ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 1160)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 12:49:33 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (21.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 6.4ms | ActiveRecord: 21.7ms | Allocations: 1014)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 12:49:34 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 1.0ms | Allocations: 1444)
+
+
+Started POST "/users/6/samples" for ::1 at 2020-04-12 12:50:35 -0400
+Processing by SamplesController#create as HTML
+  Parameters: {"sample"=>{"name"=>"scoobis doobis", "microwave"=>"true false true false true false true false true false true false true false false false", "stapler"=>"false false false false false false false false false false false false false false false false", "pentap"=>"false false true false false true false true false false true false true false false false", "scissors"=>"false false false false false false true false false false false false false false false false", "spacebar"=>"false true false false true false false false false false true false false false false false", "mouseclick"=>"false false true false false false false true false false false false false false false false", "user_id"=>6}, "user_id"=>"6"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[36mSample Create (10.0ms)[0m  [1m[32mINSERT INTO "samples" ("microwave", "stapler", "pentap", "scissors", "spacebar", "mouseclick", "user_id", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["microwave", "true false true false true false true false true false true false true false false false"], ["stapler", "false false false false false false false false false false false false false false false false"], ["pentap", "false false true false false true false true false false true false true false false false"], ["scissors", "false false false false false false true false false false false false false false false false"], ["spacebar", "false true false false true false false false false false true false false false false false"], ["mouseclick", "false false true false false false false true false false false false false false false false"], ["user_id", 6], ["created_at", "2020-04-12 16:50:35.794706"], ["updated_at", "2020-04-12 16:50:35.794706"], ["name", "scoobis doobis"]]
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+Completed 201 Created in 119ms (Views: 1.5ms | ActiveRecord: 17.2ms | Allocations: 12754)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 12:50:47 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 315ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 979)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 12:50:48 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (0.5ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1013)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 12:50:49 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 1652)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 13:07:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 348ms (Views: 2.2ms | ActiveRecord: 1.9ms | Allocations: 1070)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:07:01 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (6.0ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 7.4ms | ActiveRecord: 6.0ms | Allocations: 1015)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:07:02 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 1.0ms | Allocations: 1650)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:09:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:09:00 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 38ms (Views: 4.0ms | ActiveRecord: 17.7ms | Allocations: 832)
+
+
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (21.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 9.7ms | ActiveRecord: 21.7ms | Allocations: 1071)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:09:01 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 81ms (Views: 7.4ms | ActiveRecord: 66.8ms | Allocations: 1679)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:09:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:09:21 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFreeSample Load (74.3ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+Completed 200 OK in 21ms (Views: 2.1ms | ActiveRecord: 14.1ms | Allocations: 853)
+
+
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 7.9ms | ActiveRecord: 74.3ms | Allocations: 2432)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:09:22 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (3.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 4.7ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:10:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:10:45 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFreeSample Load (12.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 35ms (Views: 18.6ms | ActiveRecord: 12.1ms | Allocations: 1228)
+
+
+Completed 200 OK in 30ms (Views: 2.2ms | ActiveRecord: 10.6ms | Allocations: 1781)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:10:47 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (9.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 36ms (Views: 5.9ms | ActiveRecord: 23.6ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:13:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:13:16 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFreeSample Load (6.3ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+Completed 200 OK in 36ms (Views: 6.7ms | ActiveRecord: 12.6ms | Allocations: 1377)
+
+
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 38.0ms | ActiveRecord: 6.3ms | Allocations: 1886)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:13:17 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 3540ms (Views: 10.4ms | ActiveRecord: 1.9ms | Allocations: 1651)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:13:21 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:13:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 4.4ms | Allocations: 832)
+
+
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (50.3ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:13:23 -0400
+Completed 200 OK in 1974ms (Views: 1922.8ms | ActiveRecord: 50.3ms | Allocations: 1539)
+
+
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (9.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 3.7ms | ActiveRecord: 10.2ms | Allocations: 1644)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:13:23 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.2ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 439ms (Views: 430.1ms | ActiveRecord: 3.0ms | Allocations: 1653)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:13:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:13:41 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (64.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 72ms (Views: 0.7ms | ActiveRecord: 64.7ms | Allocations: 1353)
+
+
+  [1m[36mFreeSample Load (77.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 82ms (Views: 4.3ms | ActiveRecord: 77.1ms | Allocations: 1945)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:13:43 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 1292ms (Views: 6.9ms | ActiveRecord: 2.5ms | Allocations: 1648)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:13:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:13:48 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 944)
+
+
+  [1m[36mFreeSample Load (12.4ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 2.7ms | ActiveRecord: 12.4ms | Allocations: 1945)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:13:49 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 261ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:13:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:13:59 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mFreeSample Load (2.5ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1371)
+
+
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 2.5ms | Allocations: 1844)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:14:01 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+Started GET "/free_samples" for ::1 at 2020-04-12 13:14:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:14:06 -0400
+  [1m[36mSample Load (46.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 5732ms (Views: 3.4ms | ActiveRecord: 47.5ms | Allocations: 2719)
+
+
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (9.6ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 9.6ms | Allocations: 1013)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 10.2ms | Allocations: 920)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:14:09 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (4.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 5.1ms | Allocations: 1649)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:14:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:14:09 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+  [1m[36mFreeSample Load (52.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 2.7ms | ActiveRecord: 52.1ms | Allocations: 2491)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:14:10 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 1.8ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:14:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:14:12 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (0.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 1023)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (49.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 53ms (Views: 0.7ms | ActiveRecord: 49.6ms | Allocations: 890)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:14:13 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (105.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 116ms (Views: 3.3ms | ActiveRecord: 108.6ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:14:49 -0400
+Processing by FreeSamplesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:14:49 -0400
+  [1m[36mFreeSample Load (2.6ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.6ms | Allocations: 1334)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 7.1ms | Allocations: 832)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:14:50 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (58.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 323ms (Views: 5.4ms | ActiveRecord: 72.6ms | Allocations: 1648)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:04 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFreeSample Load (115.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 151ms (Views: 31.6ms | ActiveRecord: 115.7ms | Allocations: 1600)
+
+
+Completed 200 OK in 42ms (Views: 1.2ms | ActiveRecord: 12.4ms | Allocations: 1781)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:06 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 581ms (Views: 5.3ms | ActiveRecord: 2.3ms | Allocations: 1645)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:08 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:08 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mFreeSample Load (11.5ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 4.5ms | ActiveRecord: 11.5ms | Allocations: 1559)
+
+
+  [1m[36mUser Load (40.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 44ms (Views: 0.7ms | ActiveRecord: 40.8ms | Allocations: 2001)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:09 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (109.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 117ms (Views: 3.3ms | ActiveRecord: 111.3ms | Allocations: 1645)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:16 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (9.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 9.1ms | Allocations: 1013)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 832)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:17 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.1ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 2.5ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:26 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mFreeSample Load (21.4ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 6.0ms | ActiveRecord: 21.4ms | Allocations: 1453)
+
+
+Completed 200 OK in 37ms (Views: 0.7ms | ActiveRecord: 25.3ms | Allocations: 2299)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:27 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 783ms (Views: 6.5ms | ActiveRecord: 1.8ms | Allocations: 1645)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:33 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (1.4ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 1151)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 832)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:34 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 101ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1644)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:45 -0400
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:45 -0400
+Processing by FreeSamplesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 10.6ms | Allocations: 832)
+
+
+  [1m[36mFreeSample Load (22.6ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 5.3ms | ActiveRecord: 22.6ms | Allocations: 2433)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:47 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:52 -0400
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:52 -0400
+  [1m[36mSample Load (32.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 4535ms (Views: 4.3ms | ActiveRecord: 34.3ms | Allocations: 2513)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 11.4ms | Allocations: 1411)
+
+
+  [1m[36mFreeSample Load (16.3ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:52 -0400
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 159ms (Views: 141.9ms | ActiveRecord: 16.3ms | Allocations: 2410)
+
+
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 1644)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:52 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 977ms (Views: 3.4ms | ActiveRecord: 2.4ms | Allocations: 1654)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:16:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:16:53 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (153.0ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 157ms (Views: 3.7ms | ActiveRecord: 153.0ms | Allocations: 1013)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 15.6ms | Allocations: 833)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:16:54 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 1644)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 13:17:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-12 13:17:05 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by FreeSamplesController#index as HTML
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mFreeSample Load (1.1ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 3.0ms | ActiveRecord: 10.7ms | Allocations: 1976)
+
+
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 1.1ms | Allocations: 1725)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 13:17:06 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (32.7ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 55ms (Views: 4.5ms | ActiveRecord: 46.5ms | Allocations: 1644)
+
+

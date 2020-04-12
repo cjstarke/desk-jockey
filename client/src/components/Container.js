@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import Header from './shared/Header'
 import Footer from './shared/Footer'
 import Routes from '../routes/Routes' 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :free_samples
   resources :users do
     resources :samples
   end

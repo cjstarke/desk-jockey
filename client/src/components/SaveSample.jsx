@@ -17,6 +17,11 @@ class SaveSample extends React.Component {
             <input name="sample" type="text" value={this.props.sample} onChange={this.props.handleSampleName} />
             <button disabled={!this.props.sample}>Save</button>
           </form>)}
+        {this.props.currentId &&
+          (<div>
+          <span>{this.props.sampleName}</span>
+          <button disabled={!this.props.sampleUser}onClick={this.props.updateSample} value={this.props.currentId}>update</button>
+          </div>)}
       </>
     )
   }
