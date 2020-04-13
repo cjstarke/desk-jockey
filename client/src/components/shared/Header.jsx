@@ -7,18 +7,16 @@ class Header extends React.Component {
   }
   render() {
     return (
-    <>
+    <div className='Header'>
       {this.props.currentUser
         ?
-        <div>
-          {/* This is a greeting to the user if there user info has been set in state.
-          We use the guard operator to check '&&' */}
-          <h3>{this.props.currentUser.username}<button onClick={this.props.handleLogout}>logout</button></h3>
-        </div>
+
+         <> <div>{this.props.currentUser.username}</div><button className="Logout" onClick={this.props.handleLogout}>logout</button></>
+       
         :
-        <button onClick={this.props.handleLoginButton}>Login</button>
+        <button className="Logout" onClick={this.props.handleLoginButton}>Login</button>
         }
-        </>
+    </div>
     )
   }
 }

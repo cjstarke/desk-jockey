@@ -183,6 +183,15 @@ class BeatMaker extends React.Component {
       let sample = this.state.freeSamples[sampleIndex]
       this.setState({currentSample: sample})
     }
+    else {
+      this.setState({
+        currentSample: null,
+        sample: "",
+        currentId: null,
+        currentName: null,
+        sampleUser: null
+      })
+    }
 
   }
 
@@ -270,6 +279,7 @@ class BeatMaker extends React.Component {
             return (<button name="free" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
           })}
         </div>
+        <div><button name="new" onClick={this.handleSampleButton}>New Sample</button></div>
         
       </>
 

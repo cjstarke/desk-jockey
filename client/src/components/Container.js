@@ -88,7 +88,7 @@ class Container extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='Container'>
         <Header
           handleLogout={this.handleLogout}
           handleLogin={this.handleLoginButton}

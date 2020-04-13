@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;600;700;900&display=swap");
+
 .App {
   text-align: center;
+  font-family: 'Source Code Pro', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +35,74 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.Container {
+  background-color: #88bdbc;
+  min-height: 100vh;
+  color: white;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #254e58;
+  color: white;
+  min-height: 8vh;
+  border-bottom: white solid 3px;
+  font-size: 3vh;
+}
+.Logout {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 3vh;
+  font-family: 'Source Code Pro', monospace;
+
+}
+.LoginPage {
+  display: flex;
+  flex-direction: row;
+  max-height: 80vh;
+}
+.LoginImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  padding: 5vh 2vw;
+  max-height: 80vh;
+}
+.LoginLogo {
+width: 40vw;
+max-height: 40%;
+margin-bottom: 2.5vw;
+}
+
+.LoginLogo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.LoginDesk {
+  width: 40vw;
+  max-height: 60%
+
+}
+
+.LoginDesk img {
+  max-height: 100%;
+  max-width: 100%;
+
+}
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #88bdbc;
+  color: white;
+  text-align: center;
 }
