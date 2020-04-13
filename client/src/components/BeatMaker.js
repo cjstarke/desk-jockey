@@ -1,7 +1,7 @@
 import React from 'react'
 import TrackRow from './TrackRow'
 import SaveSample from './SaveSample'
-import {createSample, updateSample, getUserSamples, getFreeSamples} from '../services/api-helper'
+import {createSample, updateSample, getUserSamples, getFreeSamples, deleteSample} from '../services/api-helper'
 
 class BeatMaker extends React.Component {
   constructor(props) {
@@ -22,7 +22,8 @@ class BeatMaker extends React.Component {
       currentSample: null,
       currentId: null,
       currentName: null,
-      sampleUser: null
+      sampleUser: null,
+      change: false
     }
     this.interval = null
   }
@@ -47,7 +48,11 @@ class BeatMaker extends React.Component {
     if (this.state.currentSample !== prevState.currentSample) {
       this.setRows()
     }
+    if (this.state.change !== prevState.change) {
+      let res = await getUserSamples(this.props.currentUser.id)
+      this.setState({ userSamples: res })
     }
+  }
   submitSample = async (e) => {
     e.preventDefault()
     let sampleData = {}
@@ -60,6 +65,17 @@ class BeatMaker extends React.Component {
     sampleData.mouseclick = this.state.mouseclick.join(" ")
     sampleData.user_id=this.props.currentUser.id
     await createSample(sampleData, this.props.currentUser.id)
+    this.setState({
+      currentSample: null,
+      sample: "",
+      currentId: null,
+      currentName: null,
+      sampleUser: null
+    })
+    this.setState(prevState => ({
+      change: !prevState.change
+    }))
+
   }
   setRows = () => {
    const {currentSample} = this.state
@@ -208,19 +224,31 @@ class BeatMaker extends React.Component {
     await updateSample(sampleId, this.props.currentUser.id, sampleData)
   }
 
+  handleDeleteSample = async (e) => {
+    let sampleId = e.target.value
+    let element = e
+
+    await deleteSample(sampleId, this.props.currentUser.id)
+    this.setState({
+      currentSample: null,
+      sample: "",
+      currentId: null,
+      currentName: null,
+      sampleUser: null
+    })
+    this.setState(prevState => ({
+      change: !prevState.change
+    }))
+    
+   
+
+  }
+
   render() {
     return (
       <>
-        <div>BeatMaker</div>
-        <SaveSample
-          sample={this.state.sample}
-          currentId={this.state.currentId}
-          sampleName={this.state.currentName}
-          handleSampleName={this.handleSampleName}
-          submitSample={this.submitSample}
-          sampleUser = {this.state.sampleUser}
-          updateSample={this.hanldeUpdateSample}/>
         <div>
+         <div>
           {this.state.looping === false && (
             <button onClick={this.onPlay} >
               Play
@@ -233,42 +261,61 @@ class BeatMaker extends React.Component {
           )}
 
         </div>
+        <SaveSample
+          sample={this.state.sample}
+          currentId={this.state.currentId}
+          sampleName={this.state.currentName}
+          handleSampleName={this.handleSampleName}
+          submitSample={this.submitSample}
+          sampleUser={this.state.sampleUser}
+          deleteSample={this.handleDeleteSample}
+          updateSample={this.hanldeUpdateSample}/>
+        </div>
+        <div className="TrackRows">
         <TrackRow
           track="microwave"
+          image="https://i.imgur.com/jcvPqEI.png"
           player={this.state.player}
           array={this.state.microwave}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}/>
         <TrackRow
           track="stapler"
+          image="https://i.imgur.com/jf8xqlG.png"
           player={this.state.player}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}
           array={this.state.stapler}/>
         <TrackRow
           track="pentap"
+          image="https://i.imgur.com/dsquDCr.png"
           array={this.state.pentap}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}
           player={this.state.player} />
         <TrackRow
           track="scissors"
+          image="https://i.imgur.com/htKBdEV.png"
           array={this.state.scissors}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}
           player={this.state.player} />
         <TrackRow
           track="spacebar"
+          image="https://i.imgur.com/jVEEYYa.png"
           array={this.state.spacebar}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}
           player={this.state.player} />
         <TrackRow
           track="mouseclick"
+          image="https://i.imgur.com/YGNj0T1.png?1"
           array={this.state.mouseclick}
           currentSample = {this.state.currentSample}
           handleNodeChange={this.OnNodeChange}
           player={this.state.player} />
+        </div>
+        
         <div>
           {this.state.userSamples.map((sample, index) => {
             return (<button name="user" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)

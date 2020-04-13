@@ -60,6 +60,10 @@ export const getSample = async (id, user_id) => {
   const resp = await api.get(`users/${user_id}/samples/${id}`)
   return resp.data
 }
+export const deleteSample = async (id, user_id) => {
+  const resp = await api.delete(`users/${user_id}/samples/${id}`)
+  return resp.data
+}
 
 // ====================================
 // ============= Samples =================

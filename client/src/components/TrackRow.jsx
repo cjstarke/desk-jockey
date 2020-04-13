@@ -11,7 +11,7 @@ class TrackRow extends React.Component {
     const row = Array.from(Array(16)).map((item, index) => {
       return (
         <TrackNode
-          currentSample = {this.props.currentSample}
+          currentSample={this.props.currentSample}
           key={index}
           handleNodeChange={this.props.handleNodeChange}
           track={this.props.track}
@@ -19,11 +19,11 @@ class TrackRow extends React.Component {
           player={this.props.player}
           toggle={this.props.array[index]}
         />
-    )
+      )
     })
     return (
-      <div>
-        {this.props.track}
+      <div className="TrackSingleRow">
+        <img src={this.props.image} alt={this.props.track}/>
         {row}
       </div>
     )

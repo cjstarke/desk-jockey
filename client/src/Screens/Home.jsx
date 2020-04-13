@@ -10,7 +10,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <div>Home</div>
         <BeatMaker
           currentUser={this.props.currentUser}/>
       </>

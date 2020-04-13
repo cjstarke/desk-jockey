@@ -44,20 +44,21 @@ class TrackNode extends React.Component {
   }
 
   render() {
-    let nodewords 
+    let nodewords
+    let buttonClass
     this.props.toggle === true ? nodewords = "on" : nodewords = this.props.place
-
+     this.props.toggle === true ? buttonClass = "ButtonOn" : buttonClass = "ButtonOff"
     return (
-      <>
-        <button
+      <div className="Node">
+        <button className={buttonClass}
           onClick={(e) => {
             this.props.handleNodeChange(e)
           }}
           value={this.props.place-1}
           name= {this.props.track}
-        >{nodewords}</button>
+        ></button>
         <audio ref={ref => this.sound = ref} />
-      </>
+      </div>
     )
   }
 }  
