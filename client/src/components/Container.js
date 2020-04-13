@@ -20,11 +20,17 @@ class Container extends Component {
         username: "",
         password: ""
       },
-      loaded: false
+      loaded: false,
+      navbar: false
     }
   }
   componentDidMount = async () => {
     await this.handleVerify()
+  }
+  handleBurger = () => {
+    this.setState(prevState => ({
+      navbar: !prevState.navbar
+    }));
   }
     
   handleLoginButton = () => {
@@ -92,6 +98,7 @@ class Container extends Component {
         <Header
           handleLogout={this.handleLogout}
           handleLogin={this.handleLoginButton}
+          handleBurger={this.handleBurger}
           currentUser={this.state.currentUser} />
         <Routes
           handleLogin={this.handleLogin}
@@ -99,6 +106,7 @@ class Container extends Component {
           handleRegister={this.handleRegister}
           currentUser={this.state.currentUser}
           formData={this.state.authFormData}
+          navbar={this.state.navbar}
           loaded={this.state.loaded}/>
         <Footer/>
       </div>

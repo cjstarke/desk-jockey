@@ -11,6 +11,7 @@ class Home extends Component {
     return (
       <>
         <BeatMaker
+          navbar={this.props.navbar}
           currentUser={this.props.currentUser}/>
       </>
       

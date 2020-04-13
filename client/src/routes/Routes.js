@@ -6,7 +6,7 @@ import Register from '../screens/Register'
 import AuthenticatedRoute from './AuthenticatedRoute'
 
 
-const Routes = ({handleLogin, handleChange, handleRegister, formData, currentUser, loaded}) => (
+const Routes = ({handleLogin, handleChange, handleRegister, formData, currentUser, loaded, navbar}) => (
   <Switch>
     
      <Route
@@ -23,7 +23,7 @@ const Routes = ({handleLogin, handleChange, handleRegister, formData, currentUse
       exact
       path="/home"
       user = {currentUser}
-      render={props => <Home {...props} currentUser={currentUser} loaded={loaded}/>}
+      render={props => <Home {...props} currentUser={currentUser} loaded={loaded} navbar={navbar}/>}
     />
     <Redirect from='/' to='/home'/>
   </Switch>

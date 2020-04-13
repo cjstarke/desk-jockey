@@ -12,7 +12,8 @@ class Header extends React.Component {
       {this.props.currentUser
         ?
 
-         <> <div>{this.props.currentUser.username}</div><button className="Logout" onClick={this.props.handleLogout}>logout</button></>
+          <> <button className="Logout" onClick={this.props.handleBurger}>{this.props.currentUser.username}</button>
+            <button className="Logout" onClick={this.props.handleLogout}>logout</button></>
        
         :
             <Link to="/login">Login</Link>        }

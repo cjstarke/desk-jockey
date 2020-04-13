@@ -1,6 +1,7 @@
 import React from 'react'
 import TrackRow from './TrackRow'
 import SaveSample from './SaveSample'
+import NavBar from './shared/NavBar'
 import {createSample, updateSample, getUserSamples, getFreeSamples, deleteSample} from '../services/api-helper'
 
 class BeatMaker extends React.Component {
@@ -246,7 +247,13 @@ class BeatMaker extends React.Component {
 
   render() {
     return (
+      
       <>
+        <NavBar
+          navbar={this.props.navbar}
+          freeSamples={this.state.freeSamples}
+          userSamples={this.state.userSamples}
+          handleSampleButton={this.handleSampleButton}/>
         <div className="Player">
          <div>
           {this.state.looping === false && (
@@ -316,19 +323,7 @@ class BeatMaker extends React.Component {
           player={this.state.player} />
         </div>
         
-        <div>
-          <div>Saved Samples</div>
-          {this.state.userSamples.map((sample, index) => {
-            return (<button name="user" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
-          })}
-        </div>
-        <div>
-          <div>Free Samples</div>
-          {this.state.freeSamples.map((sample, index) => {
-            return (<button name="free" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
-          })}
-        </div>
-        <div><button name="new" onClick={this.handleSampleButton}>New Sample</button></div>
+        
         
       </>
 
