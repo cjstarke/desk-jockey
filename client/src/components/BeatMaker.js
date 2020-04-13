@@ -247,15 +247,15 @@ class BeatMaker extends React.Component {
   render() {
     return (
       <>
-        <div>
+        <div className="Player">
          <div>
           {this.state.looping === false && (
-            <button onClick={this.onPlay} >
+            <button className="ButtonPlayer" onClick={this.onPlay} >
               Play
             </button>
           )}
           {this.state.looping === true && (
-            <button onClick={this.onStop}>
+            <button className="ButtonPlayer" onClick={this.onStop}>
               Stop
             </button>
           )}
@@ -317,11 +317,13 @@ class BeatMaker extends React.Component {
         </div>
         
         <div>
+          <div>Saved Samples</div>
           {this.state.userSamples.map((sample, index) => {
             return (<button name="user" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
           })}
         </div>
         <div>
+          <div>Free Samples</div>
           {this.state.freeSamples.map((sample, index) => {
             return (<button name="free" value={index} key={index} onClick={this.handleSampleButton}>{sample.name}</button>)
           })}

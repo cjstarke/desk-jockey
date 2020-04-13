@@ -15,13 +15,13 @@ class SaveSample extends React.Component {
         {!this.props.currentId &&
           (<form onSubmit={this.props.submitSample}>
             <input name="sample" type="text" value={this.props.sample} onChange={this.props.handleSampleName} />
-            <button disabled={!this.props.sample}>Save</button>
+            <button className= "ButtonSave" disabled={!this.props.sample}>Save</button>
           </form>)}
         {this.props.currentId &&
           (<div>
           <span>{this.props.sampleName}</span>
-          <button disabled={!this.props.sampleUser} onClick={this.props.updateSample} value={this.props.currentId}>update</button>
-          <button disabled={!this.props.sampleUser}
+          <button className= "ButtonSave" disabled={!this.props.sampleUser} onClick={this.props.updateSample} value={this.props.currentId}>update</button>
+          <button className= "ButtonSave" disabled={!this.props.sampleUser}
             onClick={
               this.props.deleteSample
           } value={this.props.currentId} name="none">delete</button>

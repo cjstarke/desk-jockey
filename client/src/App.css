@@ -191,11 +191,18 @@ a:visited { text-decoration: none; }
 }
 .ButtonOff {
   background-color: #112d32;
-  border: white solid 3px;
+  border: #d9eef2 solid 3px;
+}
+
+.ButtonOff:hover {
+  background-color: #d9eef2;
 }
 .ButtonOn {
-  background-color: white;
+  background-color: #d9eef2;
   border: #112d32 solid 3px;
+}
+.ButtonOn:hover {
+  background-color: #112d32;
 }
 .Node button {
   width: 4vw;
@@ -206,3 +213,66 @@ a:visited { text-decoration: none; }
   border-radius: 20%;
 
 }
+.Player {
+  display: flex;
+  flex-direction: row;
+  padding: 3vh;
+  justify-content: center;
+  align-items: center;
+} 
+.ButtonPlayer {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 800;
+  width: 150px;
+  height: 6vh;
+  font-size: 3vh;
+  background-color: #4f4a41;
+  border: solid 3px white;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 2vw;
+}
+.ButtonSave {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 800;
+  width: 150px;
+  height: 6vh;
+  font-size: 3vh;
+  background-color: #4f4a41;
+  border: solid 3px white;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0 2vw;
+}
+.ButtonSave:hover, .ButtonPlayer:hover {
+  background-color: white;
+  border: solid 3px #4f4a41;
+  color: #4f4a41;
+}
+.ButtonSave:disabled {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 800;
+  width: 150px;
+  height: 6vh;
+  font-size: 3vh;
+  background-color: #c6c1b9;
+  border: solid 3px white;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.Player input {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 800;
+  width: 150px;
+  height: 5vh;
+  font-size: 3vh;
+  border: solid 3px #4f4a41;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3) inset;
+
+}
+
+
