@@ -24,7 +24,7 @@ const Login = (props) => {
         </div>
       </div>
       <div className="LoginProcess">
-        <div>login</div>
+        <div>Login</div>
         <form className="LoginForm" onSubmit={Submit} >
           <div className="LoginField">
             <label>Username:</label>
@@ -36,8 +36,9 @@ const Login = (props) => {
           </div>
           
           <button className="LoginButton">Login</button>
-          <Link to="/register">Register</Link>
+          <span>or  <Link to="/register">Sign up</Link></span>
         </form>
+        <div className="LoginSlogan">All the worlds a stage, and all your drab office is a drum kit</div>
       </div>
      
     </div>

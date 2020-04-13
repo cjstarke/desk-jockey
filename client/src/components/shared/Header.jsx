@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   constructor(props) {
@@ -14,8 +15,7 @@ class Header extends React.Component {
          <> <div>{this.props.currentUser.username}</div><button className="Logout" onClick={this.props.handleLogout}>logout</button></>
        
         :
-        <button className="Logout" onClick={this.props.handleLoginButton}>Login</button>
-        }
+            <Link to="/login">Login</Link>        }
     </div>
     )
   }
