@@ -23,12 +23,19 @@ const Login = (props) => {
           <img src={deskworker} alt="desk"/>
         </div>
       </div>
-      <div>
+      <div className="LoginProcess">
         <div>login</div>
-        <form onSubmit={Submit} >
-          <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
-          <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
-          <button>Login</button>
+        <form className="LoginForm" onSubmit={Submit} >
+          <div className="LoginField">
+            <label>Username:</label>
+            <input name="username" type="text" value={props.formData.username} onChange={props.handleChange} />
+          </div>
+          <div className="LoginField">
+            <label>Password:</label>
+            <input name="password" type="password" value={props.formData.password} onChange={props.handleChange} />
+          </div>
+          
+          <button className="LoginButton">Login</button>
           <Link to="/register">Register</Link>
         </form>
       </div>

@@ -8701,3 +8701,104 @@ Processing by SamplesController#index as HTML
 Completed 200 OK in 48ms (Views: 7.0ms | ActiveRecord: 34.3ms | Allocations: 1644)
 
 
+Started POST "/auth/login" for ::1 at 2020-04-12 21:55:48 -0400
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 470ms (Views: 0.9ms | ActiveRecord: 76.0ms | Allocations: 6516)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 21:55:49 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (9.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 16.4ms | ActiveRecord: 16.9ms | Allocations: 7602)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 21:55:50 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (6.8ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 70ms (Views: 39.0ms | ActiveRecord: 20.7ms | Allocations: 9303)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 21:58:04 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 397ms (Views: 2.1ms | ActiveRecord: 18.8ms | Allocations: 999)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 21:58:05 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (62.3ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 15.3ms | ActiveRecord: 62.3ms | Allocations: 1032)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 21:58:06 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (2.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 10.9ms | ActiveRecord: 8.0ms | Allocations: 1644)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 22:11:00 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 367ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 1069)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 22:11:00 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (23.4ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 8.3ms | ActiveRecord: 23.4ms | Allocations: 1015)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 22:11:01 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 2.4ms | Allocations: 1650)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-12 22:11:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"scoobis", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "scoobis"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 333ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 982)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-12 22:11:07 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (1.6ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.6ms | Allocations: 1013)
+
+
+Started GET "/users/6/samples" for ::1 at 2020-04-12 22:11:07 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.5ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 2.1ms | Allocations: 1644)
+
+
