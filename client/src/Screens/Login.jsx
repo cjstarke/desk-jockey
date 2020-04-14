@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import deskjockeylogo from '../pictures/deskjockeylogo.png'
-import deskworker from '../pictures/deskworker.png'
+
 
 
 // This component handles our login form and has a link to the register form
@@ -17,10 +16,10 @@ const Login = (props) => {
     <div className= "LoginPage">
       <div className = "LoginImages">
         <div className= "LoginLogo">
-          <img src={deskjockeylogo} alt="logo"/>
+          <img src="https://i.imgur.com/kwvubEP.png" alt="logo"/>
         </div>
         <div className="LoginDesk">
-          <img src={deskworker} alt="desk"/>
+          <img src="https://i.imgur.com/QH3ZKQi.png" alt="desk"/>
         </div>
       </div>
       <div className="LoginProcess">

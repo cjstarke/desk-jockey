@@ -14827,3 +14827,123 @@ Processing by SamplesController#index as HTML
 Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 3.2ms | Allocations: 1848)
 
 
+Started POST "/auth/login" for ::1 at 2020-04-13 19:15:34 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jeremy", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jeremy", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jeremy"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 494ms (Views: 0.8ms | ActiveRecord: 56.8ms | Allocations: 6517)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-13 19:15:36 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (5.9ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 119ms (Views: 24.4ms | ActiveRecord: 92.2ms | Allocations: 7605)
+
+
+Started GET "/users/8/samples" for ::1 at 2020-04-13 19:15:36 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 120ms (Views: 58.6ms | ActiveRecord: 53.2ms | Allocations: 9507)
+
+
+Started POST "/users/8/samples" for ::1 at 2020-04-13 19:16:28 -0400
+Processing by SamplesController#create as HTML
+  Parameters: {"sample"=>{"name"=>"Gwynne", "microwave"=>"true false true false false false false false false false false false false false false false", "stapler"=>"true false false false false false false true false false false false false true false false", "pentap"=>"false false false true false false true false false false false true false false false false", "scissors"=>"false true false false false false false false false true false false false false false false", "spacebar"=>"false false false true false false false false false false false false false false false false", "mouseclick"=>"false false false false false false true false false false false false false false false false", "user_id"=>8}, "user_id"=>"8"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[36mSample Create (18.1ms)[0m  [1m[32mINSERT INTO "samples" ("microwave", "stapler", "pentap", "scissors", "spacebar", "mouseclick", "user_id", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["microwave", "true false true false false false false false false false false false false false false false"], ["stapler", "true false false false false false false true false false false false false true false false"], ["pentap", "false false false true false false true false false false false true false false false false"], ["scissors", "false true false false false false false false false true false false false false false false"], ["spacebar", "false false false true false false false false false false false false false false false false"], ["mouseclick", "false false false false false false true false false false false false false false false false"], ["user_id", 8], ["created_at", "2020-04-13 23:16:28.942552"], ["updated_at", "2020-04-13 23:16:28.942552"], ["name", "Gwynne"]]
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/samples_controller.rb:21:in `create'
+Completed 201 Created in 151ms (Views: 0.8ms | ActiveRecord: 28.8ms | Allocations: 6883)
+
+
+Started GET "/users/8/samples" for ::1 at 2020-04-13 19:16:29 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.4ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 2052)
+
+
+Started PUT "/users/8/samples/20" for ::1 at 2020-04-13 19:16:57 -0400
+Processing by SamplesController#update as HTML
+  Parameters: {"sample"=>{"microwave"=>"true false true false false false false false false false false false false false false true", "stapler"=>"true false false false false false false true false false false false false true false true", "pentap"=>"true false true false true false false false false false false false false false false true", "scissors"=>"false true false false false false false false false true false false false false false true", "spacebar"=>"false false false true false false false false false false false false false false false true", "mouseclick"=>"false false false false false false true false false false false false false false false true"}, "user_id"=>"8", "id"=>"20"}
+  [1m[36mSample Load (0.3ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:45:in `set_sample'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[36mSample Update (23.0ms)[0m  [1m[33mUPDATE "samples" SET "microwave" = $1, "stapler" = $2, "pentap" = $3, "scissors" = $4, "spacebar" = $5, "mouseclick" = $6, "updated_at" = $7 WHERE "samples"."id" = $8[0m  [["microwave", "true false true false false false false false false false false false false false false true"], ["stapler", "true false false false false false false true false false false false false true false true"], ["pentap", "true false true false true false false false false false false false false false false true"], ["scissors", "false true false false false false false false false true false false false false false true"], ["spacebar", "false false false true false false false false false false false false false false false true"], ["mouseclick", "false false false false false false true false false false false false false false false true"], ["updated_at", "2020-04-13 23:16:57.424928"], ["id", 20]]
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/samples_controller.rb:30:in `update'
+Completed 200 OK in 55ms (Views: 0.6ms | ActiveRecord: 24.8ms | Allocations: 5062)
+
+
+Started GET "/free_samples" for ::1 at 2020-04-13 19:17:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 19:17:20 -0400
+Processing by FreeSamplesController#index as HTML
+  [1m[36mFreeSample Load (0.7ms)[0m  [1m[34mSELECT "free_samples".* FROM "free_samples"[0m
+  ↳ app/controllers/free_samples_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1013)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 2.2ms | Allocations: 921)
+
+
+Started GET "/users/8/samples" for ::1 at 2020-04-13 19:17:21 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (0.9ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 1.4ms | Allocations: 2057)
+
+
+Started DELETE "/users/8/samples/20" for ::1 at 2020-04-13 19:17:49 -0400
+Processing by SamplesController#destroy as HTML
+  Parameters: {"user_id"=>"8", "id"=>"20"}
+  [1m[36mSample Load (0.6ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:45:in `set_sample'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/samples_controller.rb:39:in `destroy'
+  [1m[36mSample Destroy (7.0ms)[0m  [1m[31mDELETE FROM "samples" WHERE "samples"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/samples_controller.rb:39:in `destroy'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/samples_controller.rb:39:in `destroy'
+Completed 204 No Content in 25ms (ActiveRecord: 15.0ms | Allocations: 2848)
+
+
+Started GET "/users/8/samples" for ::1 at 2020-04-13 19:17:49 -0400
+Processing by SamplesController#index as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/samples_controller.rb:49:in `set_user'
+  [1m[36mSample Load (1.0ms)[0m  [1m[34mSELECT "samples".* FROM "samples" WHERE "samples"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/samples_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 1848)
+
+
