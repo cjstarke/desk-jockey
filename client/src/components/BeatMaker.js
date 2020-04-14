@@ -88,7 +88,7 @@ class BeatMaker extends React.Component {
         }
           return false
       })
-      let penArray = currentSample.microwave.split(" ")
+      let penArray = currentSample.pentap.split(" ")
       let pentap = penArray.map((item) => {
         if (item === "true") {
           return true
@@ -223,6 +223,16 @@ class BeatMaker extends React.Component {
     sampleData.spacebar = this.state.spacebar.join(" ")
     sampleData.mouseclick = this.state.mouseclick.join(" ")
     await updateSample(sampleId, this.props.currentUser.id, sampleData)
+    this.setState({
+      currentSample: null,
+      sample: "",
+      currentId: null,
+      currentName: null,
+      sampleUser: null
+    })
+    this.setState(prevState => ({
+      change: !prevState.change
+    }))
   }
 
   handleDeleteSample = async (e) => {
