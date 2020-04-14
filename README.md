@@ -61,13 +61,53 @@ the biggest challenges I expect to face are working with music files and creatin
 ## Timeline
 | Component |  Estimated Time | Actual Time |
 | --- | :---: | :---: | 
-| Backend routes and seed data | 8 hrs| ?|
-| Create User/sign in | 4 hrs| ?|
-| Player that plays, loops, stops | 8hrs| ?| 
-| Song nodes play at intervals | 8 hrs| ?|
-| User create/update Sample | 4 hrs| ?|
-| Design/CSS | 12 hrs| ?|
-| Total | 48 hrs| ?|
+| Backend routes and seed data | 8 hrs| 10hrs|
+| Create User/sign in | 4 hrs| 4hrs|
+| Player that plays, loops, stops | 8hrs| 6 hrs| 
+| Song nodes play at intervals | 8 hrs| 8hrs|
+| User create/update Sample | 4 hrs| 10hrs|
+| Design/CSS | 12 hrs| 16hrs|
+| Total | 48 hrs| 54|
+
+## Deployed Site
+[deskjockey](http://deskjockey.surge.sh/home)
+
+## Code
+  componentDidUpdate = (prevProps) => {
+    if (this.props.player !== prevProps.player) {
+      if (this.props.toggle) {
+        if (this.props.player === "stopped") {
+          this.onStop()
+        }
+        else {
+          this.onPlay()
+        }
+      }
+    }
+  }
+  setSound = () => {
+    let sample = this.props.track
+    this.sound.src = tracks[sample]
+    this.sound.load()
+  }
+ 
+  onPlay = () => {
+    this.timer = setTimeout(() => {
+      this.sound.play()
+    }, (this.props.place*200))
+  }
+  onStop = () => {
+    clearTimeout(this.timer)
+    this.sound.pause()
+    this.sound.currentTime=0
+  }
+
+This code is in in the node component. It recieves props from the songrow, such as the index in the array that the song node sits. on click, it toggles the state the beatmaker function to play or not play that node. when the beatmaker plays, an interval is set to play the node after a time based off of the place. on Stop, the interval is cleared
+
+## Issues and Resolutions
+My biggest issue was storing the data for each song row. It need to be an array on the front end, but I wanted to store it as a string in the backend. So I set it all up thinking a simple join/split would work fine, but I had already developed a front end that checked for booleans, and I could not find a way to split a string into boolean values. So for each songrow I had to do a loop function which is a little timely, and I would have done it much differently starting from scratch. I also ran into problems with the design, because beatmaker table is so big (6X16), so I couldn't fit much else on the page. I was able to transfer all of the sample data Into a navbar on the side of the page, but I had to lift some state to pull it off.
+
+
 
 
 
