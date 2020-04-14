@@ -7,13 +7,20 @@ class Header extends React.Component {
     this.state = {}
   }
   render() {
+    let headClass
+    this.props.currentUser ? headClass = 'HeaderIn' : headClass = 'Header'
     return (
-    <div className='Header'>
+    <div className={headClass}>
       {this.props.currentUser
         ?
 
-          <> <button className="Logout" onClick={this.props.handleBurger}>{this.props.currentUser.username}</button>
-            <button className="Logout" onClick={this.props.handleLogout}>logout</button></>
+          <> 
+            <img src="https://i.imgur.com/Yj2X2wz.png" alt="logo" />
+            <div>
+              <button className="Logout" onClick={this.props.handleBurger}>samples</button>
+              <button className="Logout" onClick={this.props.handleLogout}>logout</button>
+            </div>
+          </>
        
         :
             <Link to="/login">Login</Link>        }
