@@ -13,18 +13,18 @@ common = User.create!(username:"common", password:"123456")
 false_string = "false false false false false false false false false false false false false false false false "
 every_other = "false true false true false true false true false true false true false true false true "
 
-nomicsci ="false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false"
-nomicsta ="false, false, false, false, true, false, false, false, false, false, false, false, true, false, false, false"
-nomicpen = "alse, false, true, true, false, false, false, false, false, false, false, false, false, true, true, true"
-nomicmous = "false, true, false, true, false, false, false, true, false, true, false, true, false, false, false, false"
-nomicspac = "true, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false"
+nomicsci ="false false false false false false false false false true true false false false false false "
+nomicsta ="false false false false true false false false false false false false true false false false "
+nomicpen = "false false true true false false false false false false false false false true true true "
+nomicmous = "false true false true false false false true false true false true false false false false "
+nomicspac = "true false false false false false true true false false false false false false false false "
 
-micone = "false, false, false, false, false, false, true, false, false, false, true, false, false, false, true, false"
-scione = "false, false, false, false, true, false, false, false, false, false, false, false, true, false, true, false"
-staone = "true, false, false, true, false, true, false, false, true, false, false, true, false, false, false, false"
-spaone = "true, false, false, true, false, true, false, false, true, false, false, true, false, false, false, false"
-mouone = "false, false, false, false, true, false, false, false, false, false, false, false, true, false, true, false"
-penone = "false, true, true, true, false, false, true, true, false, false, false, false, false, true, false, true"
+micone = "false false false false false false true false false false true false false false true false "
+scione = "false false false false true false false false false false false false true false true false "
+staone = "true false false true false true false false true false false true false false false false "
+spaone = "true false false true false true false false true false false true false false false false "
+mouone = "false false false false true false false false false false false false true false true false "
+penone = "false true true true false false true true false false false false false true false true "
 
 
 Sample.create!(microwave: false_string, stapler: every_other, pentap: every_other, scissors: false_string, spacebar: every_other, mouseclick: false_string, user: common, name: "default 1")
