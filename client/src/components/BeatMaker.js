@@ -34,7 +34,6 @@ class BeatMaker extends React.Component {
     if (this.props.currentUser) {
       let res = await getUserSamples(this.props.currentUser.id)
       this.setState({ userSamples: res })
-      console.log(res)
       }
     this.setRows()
   }
@@ -43,7 +42,6 @@ class BeatMaker extends React.Component {
       if (this.props.currentUser) {
         let res = await getUserSamples(this.props.currentUser.id)
         this.setState({ userSamples: res })
-        console.log(res)
         }
     }
     if (this.state.currentSample !== prevState.currentSample) {
@@ -182,7 +180,6 @@ class BeatMaker extends React.Component {
     let stateObj = {}
     stateTrack[index] = !stateTrack[index]
     stateObj[track] = [...stateTrack]
-    console.log(stateObj)
     this.setState({stateObj })
     
   }
