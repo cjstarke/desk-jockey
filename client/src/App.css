@@ -61,7 +61,7 @@
 }
 .Logout:hover {
   background-color: white;
-  color: #4f4a41
+  color: #4f4a41;
 }
 button:focus, input:focus {
   outline: none;
@@ -107,9 +107,11 @@ margin-bottom: 2.5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .LoginForm {
   font-size: 3vh;
+  width: 100%;
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -139,7 +141,14 @@ margin-bottom: 2.5vw;
   border-radius: 5px;
   color: white;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 2s ease;
+}
+.LoginButton:hover {
+  background-color: white;
+  border: solid 3px #4f4a41;
+  color: #4f4a41
+}
+.LoginButton:active {
+  box-shadow: none;
 }
 .LoginField {
   display: flex;
@@ -326,6 +335,43 @@ a:visited { text-decoration: none; }
   color: white;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
   margin: 1vh;
+}
+/* loading symbol */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media only screen and (max-width: 1025px) {
   .HeaderIn div{
